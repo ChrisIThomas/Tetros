@@ -14,6 +14,8 @@ public class GameSounds {
 	private static final HashMap<String, String> soundsToLoad = new HashMap<String, String>();
 	
 	public static Sound getSound(String name) {
+		Sound s = sounds.get(name);
+		if (s == null) return Sound.NULL_SOUND;
 		return sounds.get(name);
 	}
 	

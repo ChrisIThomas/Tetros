@@ -33,4 +33,12 @@ public class Sound {
 			}
 		}.start();
 	}
+	
+	public static final Sound NULL_SOUND = new Sound(null) {
+		@Override
+		public void loop() {}
+		
+		@Override
+		public void play() {}
+	};
 }

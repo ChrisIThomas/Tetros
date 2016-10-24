@@ -1,0 +1,14 @@
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="bin" />
+        <javac srcdir="src" destdir="bin" />
+    </target>
+    <target name="dist" depends="compile">
+        <jar jarfile="Tetros.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="com.thomasci.tetros.Launcher" />
+            </manifest>
+            <zipfileset dir="src/com/thomasci/tetros/resource" prefix="com/thomasci/tetros/resource" />
+        </jar>
+    </target>
+</project>
